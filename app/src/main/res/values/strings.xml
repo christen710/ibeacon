@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Senior Health Shield</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="time_attendant">Time Attendance</string>
+    <string name="title_location_permission">Location access</string>
+    <string name="text_location_permission">Allow access yor location</string>
+    <string name="ok">ok</string>
+    <string name="iBeacon_simulator">iBeacon Simulator</string>
+    <string name="todo">TODO</string>
+    <string name="not_connected">Not connected</string>
+    <string name="connect">Connect</string>
+    <string name="click_me">Click me!</string>
+    <string name="location">LOCATION</string>
+    <string name="home">HOME</string>
+    <string name="set">SET</string>
+    <string name="contacts">CONTACTS</string>
+    <string name="safe_santery_scanning">Safe Santery Scanning</string>
+    <string name="stop">STOP</string>
+    <string name="device_info">Device info</string>
+    <string name="address">Address：</string>
+    <string name="status">Status：</string>
+    <string name="return_information">Return information：</string>
+    <string name="pill_alert">Pill Alert</string>
+    <string name="device_name">device name</string>
+    <string name="rssi">Rssi</string>
+</resources>

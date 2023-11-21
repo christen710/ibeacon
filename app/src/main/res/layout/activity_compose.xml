@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Compose">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/editTextX1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="X1 經度"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/editTextY1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="Y1 緯度"
+        tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editTextD1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="D1 距離"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextX2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="X2 經度"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/editTextY2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="Y2 緯度"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/editTextD2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="D2 距離"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextX3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="X3 經度"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/editTextY3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="Y3 緯度"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/editTextD3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="D3 距離"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="查看IBEACON位置"
+        android:onClick="drawPoint"
+        tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/floor">
+
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
