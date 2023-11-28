@@ -113,7 +113,7 @@ public class settingFragment extends Fragment {
                                     tv_dht.setText(String.format("%.02f", Float.valueOf(humidity)));
                                     tv_dhtpower.setText(String.format("%.02f", Float.valueOf(temperature)));
                                     float T = Float.parseFloat(temperature);
-                                    if (T >= 20) {
+                                    if (T >= 30) {
                                         NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), CHANNEL_ID)
                                                 .setSmallIcon(R.drawable.notification) // 设置通知图标
                                                 .setContentTitle("高溫通知") // 设置通知标题

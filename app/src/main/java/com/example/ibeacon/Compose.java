@@ -28,12 +28,14 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.ibeacon.Module.Enitiy.ScannedData;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Compose extends AppCompatActivity {
-    private TextView editTextX1, editTextY1;
-    private EditText editTextX2, editTextY2, editTextX3, editTextY3, editTextD1, editTextD2, editTextD3;
+    private TextView editTextX, editTextY;
+    private EditText editTextX1, editTextY1,editTextX2, editTextY2, editTextX3, editTextY3, editTextD1, editTextD2, editTextD3;
     private PointView pointView;
     private int redPointIndex = -1;
     public static final String TAG = MainActivity.class.getSimpleName()+"My";
@@ -47,6 +49,8 @@ public class Compose extends AppCompatActivity {
                     Manifest.permission.ACCESS_FINE_LOCATION
             }, 100);
         }
+        editTextX = findViewById(R.id.editTextX);
+        editTextY = findViewById(R.id.editTextY);
         editTextX1 = findViewById(R.id.editTextX1);
         editTextY1 = findViewById(R.id.editTextY1);
         editTextX2 = findViewById(R.id.editTextX2);
@@ -60,6 +64,13 @@ public class Compose extends AppCompatActivity {
         pointView = new PointView(this);
         LinearLayout layout = findViewById(R.id.layout);
         layout.addView(pointView);
+    }
+
+    public void MAP(View view) {
+        // 創建一個Intent對象，指定從MainActivity跳轉到SecondActivity
+        Intent intent = new Intent(this, MapsActivity.class);
+        // 開始Activity
+        startActivity(intent);
     }
 
     @Override
@@ -106,10 +117,10 @@ public class Compose extends AppCompatActivity {
     };
 
     private void showLocation(Location location){
-        String longitude = String.format("%.4f", location.getLongitude());
-        String latitude = String.format("%.4f", location.getLatitude());
-        editTextX1.setText(longitude);
-        editTextY1.setText(latitude);
+        String longitude = String.format("%.5f", location.getLongitude());
+        String latitude = String.format("%.5f", location.getLatitude());
+        editTextX.setText(longitude);
+        editTextY.setText(latitude);
     }
 
     public void drawPoint(View view) {
@@ -185,7 +196,7 @@ public class Compose extends AppCompatActivity {
         points.add(new Point(x3, y3));
         points.add(new Point((int) xi, (int) yi));
         Log.e("Coordinates", "x: " + xi + ", y: " + yi);
-        redPointIndex = 3; // 例如，这里将第三个点设置为红色
+        redPointIndex = 3; // 这里将第三个点设置为红色
 
         pointView.setRedPointIndex(redPointIndex);
         pointView.setPoints(points);

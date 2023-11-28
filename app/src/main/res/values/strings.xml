@@ -23,4 +23,5 @@
     <string name="pill_alert">Pill Alert</string>
     <string name="device_name">device name</string>
     <string name="rssi">Rssi</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

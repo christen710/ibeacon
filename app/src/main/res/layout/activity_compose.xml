@@ -17,14 +17,14 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-    <TextView
+    <EditText
         android:id="@+id/editTextX1"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:hint="X1 經度"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/editTextY1"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -96,28 +96,62 @@
                 tools:ignore="MissingConstraints" />
         </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="查看IBEACON位置"
-        android:onClick="drawPoint"
-        tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-            <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@drawable/floor">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="經度:"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/editTextX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="緯度:"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/editTextY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="查看IBEACON位置"
+            android:onClick="drawPoint"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="進入google map"
+            android:onClick="MAP"
+            tools:ignore="MissingConstraints" />
 
                 <LinearLayout
                     android:id="@+id/layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="50dp"
                     android:orientation="vertical">
                 </LinearLayout>
-            </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
